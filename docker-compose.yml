@@ -1,0 +1,13 @@
+version: "3.9"  # optional since v1.27.0
+services:
+  web_car_store:
+    build: ./car-store
+    network_mode: host
+    # ports:
+    #   - "3001:3001"
+  web_x_store:
+    build: ./x-store
+    network_mode: host
+    # ports:
+    #   - "3000:3000"
+  
