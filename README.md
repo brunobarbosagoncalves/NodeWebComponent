@@ -13,6 +13,8 @@
 
 ## How to run
 
+- Rename the files .env.example to .env, to your servers are started on correct port
+
 - Mode 1 - Can use project pure project.
     - Go to folder in project 1(x-store)
     - npm i && npm run start
