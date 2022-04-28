@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const Car = ({ data }) => {
+const Car = ({ data, ...rest }) => {
   const [items, setitems] = useState([]);
   const [localdata, setlocaldata] = useState();
 
@@ -20,7 +20,7 @@ const Car = ({ data }) => {
 
   //event on start
   useEffect(() => {
-    setitems(serializeInput(data));
+    setitems([...serializeInput(data)]);
     return () => {};
   }, []);
 
@@ -44,7 +44,7 @@ const Car = ({ data }) => {
 
   return (
     <div className="car-store">
-      <p>Model 1 - Pure</p>
+      <p>Model 1 - Pure {data} </p>
       <div className="car-store-form">
         <div className="car-store-input-container">
           <input
